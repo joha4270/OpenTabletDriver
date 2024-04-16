@@ -14,6 +14,12 @@
     "AuxiliaryButtons": {
       "ButtonCount": 8
     },
+    "Wheel": {
+      "StepCount": 90,
+      "IsRelative": false,
+      "IsClockwise": true,
+      "AngleOfZeroReading": 90
+    },
     "MouseButtons": null,
     "Touch": null
   },
