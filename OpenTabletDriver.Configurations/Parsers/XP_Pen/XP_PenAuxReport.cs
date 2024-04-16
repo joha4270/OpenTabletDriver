@@ -27,22 +27,21 @@ namespace OpenTabletDriver.Configurations.Parsers.XP_Pen
 
             var wheelData = report[7];
 
-                if(wheelData == 2)
-                {
-                    WheelPositionCounter += 1;
-                }
-                else if(wheelData == 1)
-                {
-                    WheelPositionCounter -= 1;
-                }
+            if(wheelData == 2)
+            {
+                WheelPositionCounter += 1;
+            }
+            else if(wheelData == 1)
+            {
+                WheelPositionCounter -= 1;
 
                 if(WheelPositionCounter < 0)
                 {
                     WheelPositionCounter = WheelSteps - 1;
                 }
-                WheelPositionCounter %= WheelSteps;
-                WheelPosition = (uint?)WheelPositionCounter;
             }
+            WheelPositionCounter %= WheelSteps;
+            WheelPosition = (uint?)WheelPositionCounter;
         }
 
         public bool[] AuxButtons { set; get; }
